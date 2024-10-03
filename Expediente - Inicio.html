@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <title>Inicio</title>
+ <style>
+  body {
+   font-family: Arial, sans-serif;
+   text-align: center;
+  }
+  #volver-menu {
+   background-color: #4CAF50;
+   color: #fff;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+  }
+  #volver-menu:hover {
+   background-color: #3e8e41;
+  }
+ </style>
+</head>
+<body>
+ <h1>Inicio</h1>
+ 
+ <h2>Información del Alumno</h2>
+ <p>CENTRO DE BACHILLERATO TECNOLÓGICO INDUSTRIAL Y DE SERVICIOS No. 205</p>
+ <p>Alumno: JULIO CESAR SALINAS MARTINEZ</p>
+ <p>Materia: PROGRAMACIÓN WEB CON CONEXIÓN A BASES DE DATOS</p>
+ <p>Semestre: 5°</p>
+ <p>Grupo: "K"</p>
+ <p>Ciclo escolar: 2024-2025</p>
+ <p>Fecha: MARTES 01 DE OCTUBRE DEL 2024</p>
+ 
+ <h2>Presentación</h2>
+ <p>Buenas tardes, mi nombre es Julio César Salinas Martínez y este es mi menú personal que he realizado con demasiado esfuerzo.</p>
+ <p>Hay unos errores que casi no se notan, pero hice lo que pude para resolverlos.</p>
+ <p>Espero que este trabajo tenga una buena calificación.</p>
+ 
+ <button id="volver-menu" onclick="volverAlMenu()">Volver al menú</button>
+ 
+ <script>
+  function volverAlMenu() {
+   if (confirm("¿Está seguro de que desea volver al menú?")) {
+    window.location.href = 'MenuPersonal.html';
+   }
+  }
+ </script>
+</body>
+</html>

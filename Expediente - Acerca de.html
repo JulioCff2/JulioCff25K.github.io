@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <title>Acerca de</title>
+ <style>
+  body {
+   font-family: Arial, sans-serif;
+   text-align: center;
+  }
+  #volver-menu {
+   background-color: #4CAF50;
+   color: #fff;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+  }
+  #volver-menu:hover {
+   background-color: #3e8e41;
+  }
+ </style>
+</head>
+<body>
+ <h1>Acerca de</h1>
+ 
+ <p>Creado por: JULIO CESAR SALINAS MARTINEZ</p>
+ 
+ <h2>Esta aplicación contiene:</h2>
+ <ul>
+  <li><strong>Calculadora Básica:</strong> Realiza las operaciones básicas (suma, resta, multiplicación, división, módulo)</li>
+  <li><strong>Calculadora Matemática:</strong> Resuelve problemas matemáticos avanzados (raíz cuadrada, potencia, seno, coseno, etc.)</li>
+  <li><strong>Calendario 2024:</strong> Muestra todos los días del año 2024</li>
+ </ul>
+ 
+ <button id="volver-menu" onclick="volverAlMenu()">Volver al menú</button>
+ 
+ <script>
+  function volverAlMenu() {
+   if (confirm("¿Está seguro de que desea volver al menú?")) {
+    window.location.href = 'MenuPersonal.html';
+   }
+  }
+ </script>
+</body>
+</html>

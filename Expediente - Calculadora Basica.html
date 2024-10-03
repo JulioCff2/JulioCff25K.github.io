@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <title>Calculadora Básica</title>
+ <link rel="stylesheet" type="text/css" href="estilo de calculadora.css">
+ <script>
+ var input1, input2;
+ 
+ function operation() {
+ var x = Number(prompt("Sr. usuario, introduce una opción"));
+ var w = document.getElementById('resultado');
+ switch (x) {
+ case 1:
+ w.innerHTML = input1 + input2;
+ break;
+ case 2:
+ w.innerHTML = input1 - input2;
+ break;
+ case 3:
+ w.innerHTML = input1 * input2;
+ break;
+ case 4:
+ if (input2 !== 0) {
+ w.innerHTML = input1 / input2;
+ } else {
+ w.innerHTML = "Error: División por cero";
+ }
+ break;
+ case 5:
+ w.innerHTML = input1 % input2;
+ break;
+ case 6:
+ if (confirm("¿Está seguro de que desea salir?")) {
+ document.body.innerHTML = "¡Se ha salido!";
+ }
+ break;
+ }
+ }
+ 
+ function iniciar() {
+ input1 = Number(prompt("Sr. usuario, introduce un valor"));
+ input2 = Number(prompt("Sr. usuario, introduce el segundo valor"));
+ document.getElementById('entrada1').innerHTML = "Primer valor -> " + input1;
+ document.getElementById('entrada2').innerHTML = "Segundo valor -> " + input2;
+ }
+ 
+ function volverAlMenu() {
+ if (confirm("¿Está seguro de que desea volver al menú?")) {
+ window.location.href = 'MenuPersonal.html';
+ }
+ }
+ </script>
+</head>
+<body onload="iniciar()">
+ <div id="calculadora">
+ <h1>Calculadora Básica</h1>
+ <table>
+ <tr>
+ <th>Operación</th>
+ <th>Descripción</th>
+ </tr>
+ <tr>
+ <td>1</td>
+ <td>Sumar</td>
+ </tr>
+ <tr>
+ <td>2</td>
+ <td>Restar</td>
+ </tr>
+ <tr>
+ <td>3</td>
+ <td>Multiplicar</td>
+ </tr>
+ <tr>
+ <td>4</td>
+ <td>Dividir</td>
+ </tr>
+ <tr>
+ <td>5</td>
+ <td>Obtener módulo</td>
+ </tr>
+ <tr>
+ <td>6</td>
+ <td>Salir</td>
+ </tr>
+ </table>
+ <p>En función de la opción seleccionada realizará la operación y si pulsa la opción 6, con el botón confirm preguntar si está</p>
+ <div id="entrada1" style="color:red;font-size: 1.6em;"></div>
+ <div id="entrada2" style="color:red;font-size: 1.6em;"></div>
+ <form style="margin: auto;text-align: center;">
+ <input type="button" value="Operación" onclick="operation()" />
+ <button id="volver-menu" onclick="volverAlMenu()">Volver al menú</button>
+ </form>
+ <div id="resultado" style="color:green;font-size: 1.6em;margin:auto;text-align: center;">Pulsa para realizar una operación</div>
+ </body>
+</html>
